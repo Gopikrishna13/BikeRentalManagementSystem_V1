@@ -16,5 +16,12 @@ namespace BikeRentalManagement
             this.Batterycapacity = Batterycapacity;
             this.FuelType = FuelType;
         }
+
+        public void DisplayElectricBikeInfo()
+        {
+            var bikeinfo = DisplayBikeInfo();
+            Console.WriteLine($"{bikeinfo},BatteyCapacity:{Batterycapacity},FuelType:{FuelType}");
+
+        }
     }
 }

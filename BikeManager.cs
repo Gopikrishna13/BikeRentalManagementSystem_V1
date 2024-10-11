@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Diagnostics.Eventing.Reader;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -31,7 +32,33 @@ namespace BikeRentalManagement
                 Console.Write("Enter Rental:");
                 decimal price = decimal.Parse(Console.ReadLine());
 
-                Bike bike = new Bike(Id, brand, model, price);
+            Console.Write("Choose an option: 1.Electric \n 2.Petrol:");
+            int option=int.Parse(Console.ReadLine());
+            Bike bike;
+            if(option==1) 
+                {
+                Console.Write("Enter Battery Capacity:");
+                string battery=Console.ReadLine();
+
+                Console.Write("Enter Fuel Type:");
+                string fuel=Console.ReadLine();
+                bike=new ElectricBike(Id, brand, model,price, battery, fuel);
+                bike.DisplayBikeInfo();
+
+                }
+                else
+                {
+                Console.Write("Enter Fuel Tank Capacity:");
+                string fuel = Console.ReadLine();
+
+                Console.Write("Enter Engine:");
+                string engine = Console.ReadLine();
+                bike = new PetrolBike(Id, brand, model, price, fuel, engine);
+                bike.DisplayBikeInfo();
+
+            }
+                
+               // Bike bike = new Bike(Id, brand, model, price);
                 BikeList.Add(bike);
                 Console.WriteLine("Data added");
 

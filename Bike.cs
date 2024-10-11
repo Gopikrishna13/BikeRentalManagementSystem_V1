@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -40,19 +41,25 @@ namespace BikeRentalManagement
             return  $"bikeId : {BikeId}, brand: {Brand}, model: {Model}, rentalPrice: {RentalPrice}";
         }
 
-        public static List<Bike> NumberOfPlayersInOfflineGame
-        {
-            get
-            {
-                //return numberOfPlayersInOfflineGame;
-            }
-            set
-            {
+        //public static List<Bike> NumberOfPlayersInOfflineGame
+        //{
+        //    get
+        //    {
+        //        //return numberOfPlayersInOfflineGame;
+        //    }
+        //    set
+        //    {
        
-            }
+        //    }
+        //}
+
+
+
+        public virtual  string DisplayBikeInfo()
+        {
+            return $"bikeId : {BikeId}, brand: {Brand}, model: {Model}, rentalPrice: {RentalPrice}";
+
         }
-
-
 
 
 

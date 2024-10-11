@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms.VisualStyles;
 
 namespace BikeRentalManagement
 {
@@ -15,6 +16,13 @@ namespace BikeRentalManagement
         {
             this.FuelTankCapacity = FuelTankCapacity;
             this.EngineCapacity = EngineCapacity;
+        }
+
+        public void DisplayElectricBikeInfo()
+        {
+            var bikeinfo = DisplayBikeInfo();
+            Console.WriteLine($"{bikeinfo},BatteyCapacity:{FuelTankCapacity},FuelType:{EngineCapacity}");
+
         }
     }
 }
