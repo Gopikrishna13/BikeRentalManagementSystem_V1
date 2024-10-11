@@ -9,17 +9,19 @@ namespace BikeRentalManagement
 {
     internal class BikeManager
     {
+         public static int Ng{ get; set; }
 
         public List<Bike> BikeList = new List<Bike>();
+
+        public List <Bike> NewList=new List<Bike>();
 
         public void CreateBike()
         {
             Console.Write("Enter ID:");
             string Id=Console.ReadLine();
 
-            bool chkId=checkId(Id.ToLower());
-            if(chkId)
-            {
+           // bool chkId=checkId(Id.ToLower());
+           
                 Console.Write("Enter Brand:");
                 string brand = Console.ReadLine();
 
@@ -33,11 +35,8 @@ namespace BikeRentalManagement
                 BikeList.Add(bike);
                 Console.WriteLine("Data added");
 
-            }
-            else
-            {
-                Console.Write("Invalid Id");
-            }
+            
+            
 
           
 
@@ -45,25 +44,25 @@ namespace BikeRentalManagement
 
 
 
-        public bool checkId(string Id)
-        {
-            var result = BikeList.Any(x => x.BikeId == Id);
-            return result;
+        //public bool checkId(string Id)
+        //{
+        //    var result = BikeList.Any(x => x.BikeId == Id);
+        //    return result;
 
-        }
+        //}
 
 
 
-        public void DeleteBike()
-        {
-            Console.Write("Enter ID to delete :");
-            string Id = Console.ReadLine();
+        //public void DeleteBike()
+        //{
+        //    Console.Write("Enter ID to delete :");
+        //    string Id = Console.ReadLine();
 
-            var bikeremove = BikeList.Single(x => x.BikeId.ToLower() == Id.ToLower());
-            BikeList.Remove(bikeremove);
-            Console.WriteLine("Deleted");
+        //    var bikeremove = BikeList.Single(x => x.BikeId.ToLower() == Id.ToLower());
+        //    BikeList.Remove(bikeremove);
+        //    Console.WriteLine("Deleted");
 
-        }
+        //}
 
         public void ReadBikes()
         {
@@ -74,34 +73,34 @@ namespace BikeRentalManagement
 
         }
 
-        public void UpdateBike()
-        {
-            Console.Write("Enter ID to Update :");
-            string Id = Console.ReadLine();
+        //public void UpdateBike()
+        //{
+        //    Console.Write("Enter ID to Update :");
+        //    string Id = Console.ReadLine();
 
-            bool chkId = checkId(Id.ToLower());
-            if (chkId)
-            {
-                Console.Write("Enter Brand:");
-                string brand = Console.ReadLine();
+        //    bool chkId = checkId(Id.ToLower());
+        //    if (chkId)
+        //    {
+        //        Console.Write("Enter Brand:");
+        //        string brand = Console.ReadLine();
 
-                Console.Write("Enter Model:");
-                string model = Console.ReadLine();
+        //        Console.Write("Enter Model:");
+        //        string model = Console.ReadLine();
 
-                Console.Write("Enter Rental:");
-                decimal rental = decimal.Parse(Console.ReadLine());
+        //        Console.Write("Enter Rental:");
+        //        decimal rental = decimal.Parse(Console.ReadLine());
 
-                var result = BikeList.Single(x => x.BikeId.ToLower() == Id.ToLower());
-                BikeList.Remove(result);
+        //        var result = BikeList.Single(x => x.BikeId.ToLower() == Id.ToLower());
+        //        BikeList.Remove(result);
 
-                Bike bike = new Bike(Id, brand, model, rental);
-                BikeList.Add(bike);
-            }
-            else
-            {
-                Console.WriteLine("Invalid ID");
-            }
+        //        Bike bike = new Bike(Id, brand, model, rental);
+        //        BikeList.Add(bike);
+        //    }
+        //    else
+        //    {
+        //        Console.WriteLine("Invalid ID");
+        //    }
 
-        }
+        //}
     }
 }

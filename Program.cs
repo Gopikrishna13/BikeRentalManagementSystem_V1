@@ -33,10 +33,10 @@ namespace BikeRentalManagement
                         manager.ReadBikes();
                         break;
 
-                    case 3:manager.UpdateBike();
+                    case 3://manager.UpdateBike();
                         break;
 
-                    case 4:manager.DeleteBike();
+                    case 4://manager.DeleteBike();
                         break;
                     case 5: 
                         response = false;

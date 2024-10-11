@@ -14,6 +14,7 @@ namespace BikeRentalManagement
         private string Model {  get; set; }
 
         private decimal RentalPrice {  get; set; }
+        public List <Bike> newBike { get; set; }=new List<Bike>();
 
         public Bike(string bikeId, string brand, string model, decimal rentalPrice)
         {
@@ -23,19 +24,37 @@ namespace BikeRentalManagement
             this.Model = model;
             this.RentalPrice = rentalPrice;
 
-   
+        //    var bike = 
+        //    {
+        //        BikeId =   this.BikeId,
+        //        Brand = brand,
+        //        Model = model,
+        //        RentalPrice = rentalPrice
+        //    };
 
-        }
+        //}
+
+      
         public override string ToString()
         {
             return  $"bikeId : {BikeId}, brand: {Brand}, model: {Model}, rentalPrice: {RentalPrice}";
         }
 
-   
+        public static List<Bike> NumberOfPlayersInOfflineGame
+        {
+            get
+            {
+                //return numberOfPlayersInOfflineGame;
+            }
+            set
+            {
+       
+            }
+        }
 
-        
-    
-        
+
+
+
 
 
     }

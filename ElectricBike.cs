@@ -8,5 +8,7 @@ namespace BikeRentalManagement
 {
     internal class ElectricBike
     {
+        public string Batterycapacity {  get; set; }    
+        public string FuelType {  get; set; }
     }
 }

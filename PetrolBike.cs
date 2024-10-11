@@ -8,5 +8,7 @@ namespace BikeRentalManagement
 {
     internal class PetrolBike
     {
+        public string FuelTankCapacity {  get; set; }
+        public string EngineCapacity {  get; set; } 
     }
 }
