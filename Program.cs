@@ -10,6 +10,10 @@ namespace BikeRentalManagement
     {
         static void Main(string[] args)
         {
+            Bike bike = new Bike("1","Revolt","EV",2000);
+
+            Console.WriteLine(bike.ToString());
+            Console.ReadLine(); 
         }
     }
 }
