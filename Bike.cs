@@ -16,7 +16,7 @@ namespace BikeRentalManagement
 
         private decimal RentalPrice {  get; set; }
         public List <Bike> newBike { get; set; }=new List<Bike>();
-
+        public static int TotalBikes = 0;
         public Bike(string bikeId, string brand, string model, decimal rentalPrice)
         {
 
@@ -24,6 +24,7 @@ namespace BikeRentalManagement
             this. Brand = brand;
             this.Model = model;
             this.RentalPrice = rentalPrice;
+            TotalBikes++;
 
         //    var bike = 
         //    {
@@ -33,7 +34,7 @@ namespace BikeRentalManagement
         //        RentalPrice = rentalPrice
         //    };
 
-        //}
+        }
 
       
         public override string ToString()
