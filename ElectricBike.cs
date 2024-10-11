@@ -6,9 +6,15 @@ using System.Threading.Tasks;
 
 namespace BikeRentalManagement
 {
-    internal class ElectricBike
+    internal class ElectricBike:Bike
     {
         public string Batterycapacity {  get; set; }    
         public string FuelType {  get; set; }
+
+        public ElectricBike(string Id,string brand,string model,decimal price, string Batterycapacity, string FuelType):base(Id, brand, model, price)
+        {
+            this.Batterycapacity = Batterycapacity;
+            this.FuelType = FuelType;
+        }
     }
 }
