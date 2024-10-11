@@ -17,25 +17,28 @@ namespace BikeRentalManagement
 
         public Bike(string bikeId, string brand, string model, decimal rentalPrice)
         {
+
             this.BikeId = bikeId;
-           this. Brand = brand;
+            this. Brand = brand;
             this.Model = model;
             this.RentalPrice = rentalPrice;
+
+   
+
         }
         public override string ToString()
         {
             return  $"bikeId : {BikeId}, brand: {Brand}, model: {Model}, rentalPrice: {RentalPrice}";
         }
 
-        //public string getBikeId()
-        //{
+   
 
-        //}
-        //public string setbikeId()
-        //{
+        
+    
+        
 
-        //}
+
     }
-     
+
 
 }
