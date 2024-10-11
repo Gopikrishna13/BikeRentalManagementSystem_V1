@@ -17,11 +17,17 @@ namespace BikeRentalManagement
             this.FuelType = FuelType;
         }
 
-        public void DisplayElectricBikeInfo()
-        {
-            var bikeinfo = DisplayBikeInfo();
-            Console.WriteLine($"{bikeinfo},BatteyCapacity:{Batterycapacity},FuelType:{FuelType}");
+        //public void DisplayElectricBikeInfo()
+        //{
+        //    var bikeinfo = DisplayBikeInfo();
+        //    Console.WriteLine($"{bikeinfo},BatteyCapacity:{Batterycapacity},FuelType:{FuelType}");
 
+        //}
+
+        public override string DisplayBikeInfo()
+        {
+            var bikeinfo = base.DisplayBikeInfo();
+              return ($"{bikeinfo},BatteyCapacity:{Batterycapacity},FuelType:{FuelType}");
         }
     }
 }

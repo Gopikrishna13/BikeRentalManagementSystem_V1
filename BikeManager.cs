@@ -43,7 +43,8 @@ namespace BikeRentalManagement
                 Console.Write("Enter Fuel Type:");
                 string fuel=Console.ReadLine();
                 bike=new ElectricBike(Id, brand, model,price, battery, fuel);
-                bike.DisplayBikeInfo();
+               // bike.DisplayBikeInfo();
+               Console.WriteLine(bike.DisplayBikeInfo());
 
                 }
                 else
@@ -54,7 +55,8 @@ namespace BikeRentalManagement
                 Console.Write("Enter Engine:");
                 string engine = Console.ReadLine();
                 bike = new PetrolBike(Id, brand, model, price, fuel, engine);
-                bike.DisplayBikeInfo();
+                // bike.DisplayBikeInfo();
+                Console.WriteLine(bike.DisplayBikeInfo());
 
             }
                 
