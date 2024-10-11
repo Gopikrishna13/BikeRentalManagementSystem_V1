@@ -26,6 +26,15 @@ namespace BikeRentalManagement
         {
             return  $"bikeId : {BikeId}, brand: {Brand}, model: {Model}, rentalPrice: {RentalPrice}";
         }
+
+        //public string getBikeId()
+        //{
+
+        //}
+        //public string setbikeId()
+        //{
+
+        //}
     }
      
 
